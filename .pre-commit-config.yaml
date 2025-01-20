@@ -1,0 +1,25 @@
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: black (local)
+        entry: poetry run black
+        language: system
+        args: [app, tests]
+        types: [python]
+
+      - id: flake8
+        name: flake8 (local)
+        entry: poetry run flake8
+        language: system
+        args: [app, tests]
+        types: [python]
+
+      - id: pytest-check
+        name: pytest-check
+        stages: [pre-commit]
+        types: [python]
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true

@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "cybercaresender"
+version = "0.1.0"
+description = ""
+authors = ["remigijus <remigap@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.1"
+requests = "^2.32.3"
+fastapi = "^0.115.6"
+APScheduler = "^3.11.0"
+pre-commit = "^4.0.1"
+black = "^24.10.0"
+flake8 = "^7.1.1"
+pytest = "^8.3.4"
+httpx = "^0.28.1"
+uvicorn = "^0.34.0"
+asyncio = "^3.4.3"
+mock = "^5.1.0"
+pytest-mock = "^3.14.0"
+anyio = "^4.8.0"
+pytest-asyncio = "^0.25.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+skip-string-normalization = false
