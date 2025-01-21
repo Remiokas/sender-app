@@ -6,11 +6,9 @@ export-requirements:
 	poetry export --output requirements.txt --without-hashes;
 
 install:
-	py -m venv venv; \
+	python 3.11 -m venv venv; \
 	. venv/Scripts/activate; \
-	pip install poetry==1.1.15 \
-	export-requirements \
-	python -m pip install -r requirements.txt
+	python 3.11 -m pip install -r requirements.txt
 
 clean:
 	find . -name "*.pyc" -exec rm -rf '{}' \; ; \
